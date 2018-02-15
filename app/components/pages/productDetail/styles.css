@@ -1,0 +1,89 @@
+    
+
+.header {
+    background: #414344;
+    padding: 10px 10px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    margin-top: 50px
+}
+
+.body {
+    margin-bottom: 50px
+}
+
+.body img{
+    height: 200px;
+    width: 200px
+}
+
+.body h5 {
+    font-weight: bold;
+    margin: 5px 0;
+    border-bottom: 2px solid #f1f1f1;
+    padding-bottom: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.video_wrapper {
+    margin: 25px 0
+}
+
+.video_wrapper iframe {
+    width: 50%;
+    height: 380px;
+}
+
+.list_wrapper h4 {
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 15px 0;
+    border-bottom: 1px solid #e6dfdf;
+}
+
+.list_wrapper ul {
+    margin: 20px 0
+}
+
+.list_wrapper ul li {
+    line-height: 35px
+}
+
+.note_text {
+    font-weight: bold;
+    color: #5a5353;
+    font-size: 15px;
+}
+
+.product_menu_wrapper {
+    border: 3px solid #ececec;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.product_menu_wrapper h3{
+    background: #ffffff;
+    padding: 15px;
+    color: #000;
+    text-align: center;
+    border-bottom: 3px solid #de963f;
+}
+
+.ratings_wrapper {
+    width: 100%
+}
+
+.ratings_wrapper label {
+    font-size: 25px
+}
+
+.video_list {
+    list-style: none
+}
+
+.video_list li {
+    margin: 5px;
+    display: inline
+}

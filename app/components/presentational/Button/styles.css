@@ -1,0 +1,30 @@
+.submitButton {
+    background: #4a142e;
+    border: 0;
+    padding: 14px;
+    color: #fff;
+    width: 100%;
+    max-width: 200px;
+    font-weight: bold;
+    margin-top: 5px
+}
+
+.btn {
+    background: #de963f;
+    border: 0;
+    padding: 14px;
+    color: #fff;
+    width: 100%;
+    max-width: 200px;
+    font-weight: bold;
+    margin-top: 5px
+}
+
+.btn:hover {
+    background: #ccc;
+    cursor: pointer
+}
+
+.btn i {
+    color: #e8e8e8 !important
+} 

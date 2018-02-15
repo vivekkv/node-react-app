@@ -1,0 +1,11 @@
+.bread_crumb_help_icon {
+    float: right !important;
+    font-size: 27px;
+    margin-right: 35px;
+    color: #1571b5;
+    cursor: pointer
+}
+
+.bread_crumb_help_icon:hover{
+    color:#0273c7
+}

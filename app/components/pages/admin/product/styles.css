@@ -1,0 +1,34 @@
+.tab_content {
+    padding: 50px 10px
+}
+
+.grid_image {
+    width: 50px
+}
+
+.image_view_wrapper {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    padding: 0 20px 20px 20px;
+    background: #cecece;
+    position: fixed;
+    top: 20%;
+    left: 0;
+    right: 0;
+    border: 0;
+    z-index: 1;
+}
+
+.image_view_wrapper img {
+    width: 100%;
+    height: 88%;
+    float: left;
+}
+
+.image_view_wrapper i {
+    float: right;
+    color: #b71717;
+    font-size: 29px;
+    margin: 10px;
+}
