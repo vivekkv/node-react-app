@@ -2,12 +2,12 @@ import React from 'react';
 import Slider from './slider';
 import Modal from './modal';
 import Welcome from './welcome';
-import Testimonial from './testimonial';
 import Features from './features';
 import Contact from './contact';
 import Video from './videGallery';
 import LatestNews from './latestNews';
 import { SUBMIT_CONTACT, INPUT_CHANGE }  from 'constants/admin/contact';
+import { INIT_MODULE } from 'constants/admin/landingPage';
 import reduxAction from 'reduxImplementations/reduxActionHelper';
 import { connect } from 'react-redux';
 import { Map } from 'immutable';
@@ -24,9 +24,9 @@ class LandingPage extends React.Component {
 
             <Welcome />
 
-            <Video />
+            <Video {...this.props}/>
 
-            <Features />
+            <Features {...this.props}/>
 
             <LatestNews {...this.props} />
 
@@ -35,6 +35,10 @@ class LandingPage extends React.Component {
             <Contact data={this.props.contact} onChange={this.props.onChange} onEmailSubmit={this.props.onEmailSubmit}/>
 
         </div>
+    }
+
+    componentDidMount() {
+        this.props.initLandingPage();
     }
 }
 
@@ -58,6 +62,9 @@ let mapDispatchToProps = function (dispatch) {
         },
         loadPageContent: function (type) {
             dispatch(reduxAction(LOAD_PAGE_CONTENT, { 'pageType': type }))
+        },
+        initLandingPage: function() {
+            dispatch(reduxAction(INIT_MODULE));
         }
     }
 }

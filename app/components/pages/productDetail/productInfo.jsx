@@ -2,6 +2,7 @@ import React from 'react';
 import Row from 'presentational/Row';
 import StarRatingComponent from 'react-star-rating-component';
 import StarInput from './starInput';
+import VideoWrapper from 'presentational/VideoWrapper';
 import Styles from './styles';
 
 export default class ProdutInfo extends React.Component {
@@ -41,7 +42,7 @@ export default class ProdutInfo extends React.Component {
 
 
 
-                        <div className={Styles.ratings_wrapper}>
+                        {/* <div className={Styles.ratings_wrapper}>
                             <StarRatingComponent
                                 name={productInfo.id}
                                 value={productInfo.productRating}
@@ -50,7 +51,7 @@ export default class ProdutInfo extends React.Component {
                                 onStarClick={this.onStarClick.bind(this)}
                             />
 
-                        </div>
+                        </div> */}
 
                     </div>
 
@@ -131,7 +132,7 @@ export default class ProdutInfo extends React.Component {
                                 }
                             </div>
 
-                           
+
 
                         </Row>
 
@@ -149,7 +150,9 @@ export default class ProdutInfo extends React.Component {
                                             <ul className={Styles.video_list}>
                                                 {
                                                     productInfo.videos.map((i, index) => {
-                                                        return <li key={index}> <iframe onClick={this.showVideo} width="250" height="250" src={i.path} allowfullscreen></iframe></li>
+                                                        return <li key={index}>
+
+                                                            <VideoWrapper width="250" height="250" path={i.path} allowfullscreen></VideoWrapper></li>
                                                     })
                                                 }
                                             </ul>

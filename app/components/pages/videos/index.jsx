@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Map } from 'immutable';
 import reduxAction from '../../../reduxImplementations/reduxActionHelper';
 import { LOAD_PRODUCT_VIDEOS } from 'reduxImplementations/constants/admin/videos';
+import VideoWrapper from 'presentational/VideoWrapper';
 
 class Videos extends React.Component {
 
@@ -20,7 +21,7 @@ class Videos extends React.Component {
                             return <figure>
                                 <a href={"/#/product/detail/" + image.category_id + "/" + image.id}>
 
-                                     <iframe onClick={this.showVideo} src={image.path} allowfullscreen></iframe>
+                                     <VideoWrapper path ={image.path} width={"80%"} height={"80%"}/>
                                     <figcaption>{image.name} <p>{image.description}</p></figcaption>
 
                                 </a>

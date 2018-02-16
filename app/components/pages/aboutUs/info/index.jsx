@@ -23,7 +23,7 @@ export default class Info extends React.Component {
                                     <div id="myTabContent" className="tab-content">
                                         <div role="tabpanel" className="tab-pane fade in active" id="home" aria-labelledby="home-tab">
                                             <div className="tabcontent-grids">
-                                                <p>Techno Consultancy Services is proud to introduce itself as the major
+                                                <p>Sarah's Techno Services is proud to introduce itself as the major
                                                 Manufacturer, Exporter and Supplier of a wide range of Post harvesting and food processing
                                                 Machines and Equipment. The range includes Pneumatic Piston Filler, Fruit Mill, Hammer Mill,
                                                 Heating Kettle, Lemon Cutting Machine and Sautiner. We provide our services as consultants in

@@ -22,7 +22,6 @@ function* onInputChange() {
         try {
 
             name = (type == INIT_MODULE ? INITALIZE : name);
-            debugger
             let callbacks = getCallbacks(formData, name, value);
             let state = yield call(bindInputChange, callbacks, name, value, false);
 

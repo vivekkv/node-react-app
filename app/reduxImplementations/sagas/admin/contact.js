@@ -59,8 +59,6 @@ function* onSubmit() {
             }
             
 
-            debugger
-
 			alert(response.data.message);
 
 		} catch (e) {

@@ -44,8 +44,6 @@ function* loadProductInfo() {
 
         if (productInfoResponse.productInfo) {
 
-            debugger
-
             yield put(reduxAction(SET_FORM, {
                 'data': {
                     'productInfo': productInfoResponse.productInfo,

@@ -1,0 +1,21 @@
+.listParagraph {
+    font-size: 26px;
+    text-align: center;
+    color: #53280e;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px solid #827d7d;
+    border-top: 2px solid #827d7d;
+}
+
+.list {
+    /* list-style: none; */
+    line-height: 60px;
+    margin-bottom: 14px;
+    /* font-weight: bold; */
+    list-style-type: circle;
+    margin-left: 2%;
+    margin-top: 23px;
+    font-size: 21px;
+    color: #000000;
+}

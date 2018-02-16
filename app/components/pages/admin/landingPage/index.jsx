@@ -17,6 +17,7 @@ import validate from 'validate.js';
 import { Tabs, Tab } from 'react-bootstrap';
 import Categories from './categories';
 import LatestProduct from './latestProduct';
+import Videos from './videos';
 import Styles from '../product/styles.css';
 
 class LandingPageContent extends AuthenticationComponent {
@@ -27,7 +28,7 @@ class LandingPageContent extends AuthenticationComponent {
 
             <Tabs defaultActiveKey={1}>
 
-                <Tab eventKey={1} title="Footer Categories">
+                <Tab eventKey={1} title="Landing Page Categories">
 
                     <div className={Styles.tab_content}>
 
@@ -46,6 +47,18 @@ class LandingPageContent extends AuthenticationComponent {
                     </div>
 
                 </Tab>
+
+                
+                <Tab eventKey={3} title="Videos">
+
+                    <div className={Styles.tab_content}>
+
+                        <Videos {...this.props} />
+
+                    </div>
+
+                </Tab>
+                
 
             </Tabs>
 
@@ -80,6 +93,13 @@ let mapDispatchToProps = function (dispatch) {
         },
         loadPageContent: function (type) {
             dispatch(reduxAction(LOAD_PAGE_CONTENT, { 'pageType': type }))
+        },
+        onDelete: function (id) {
+
+            let deleteConfirmed = confirm("Are you sure to delete this item !");
+            if (deleteConfirmed == true) {
+                dispatch(reduxAction(DELETE_ITEM, { id }))
+            }
         }
     }
 }

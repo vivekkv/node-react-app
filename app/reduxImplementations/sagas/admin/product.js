@@ -122,7 +122,6 @@ function* loadMetisMenu() {
 		let formData = yield select(getStateData);
 		let menuList = [];
 
-		debugger
 		if (formData.get("metisMenu").size == 0) {
 
 			let metisMenuResponse = yield call(getMetisMenu);

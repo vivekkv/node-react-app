@@ -5,7 +5,7 @@ import reduxAction from 'reduxImplementations/reduxActionHelper';
 import { alertResponse } from 'utils/notification';
 import { callApi } from 'utils/request';
 import { logError } from 'utils/errorLog';
-import { getLandingPageContent } from 'services/landingPage';
+import { getLandingPageContent, getLatestProducts, getProductVideos } from 'services/landingPage';
 import { getProductList } from 'services/product';
 import { getCategories } from 'services/category';
 import { INPUT_CHANGE, SET_FORM, INIT_MODULE, INITALIZE, SUBMIT_ITEM, DELETE_ITEM, EDIT_ITEM, CLEAR_FORM, LOAD_PAGE_CONTENT } from 'constants/admin/landingPage';
@@ -51,13 +51,13 @@ function* onSubmit() {
 			if(pageType == "CATEGORIES") {
 
 				let category = _.find(formData.get("categoryList").toArray(), (i) => { return i.value == formData.get("value") });
-				additionalInfo= category.text;
+				additionalInfo = category.text;
 			}	
 
-			if(pageType == "PRODUCTS") {
+			if(pageType == "PRODUCTS" || pageType == "VIDEOS") {
 
-				let category = _.find(formData.get("productList").toArray(), (i) => { return i.value == formData.get("value") });
-				additionalInfo= category.text;
+				let product = _.find(formData.get("productList").toArray(), (i) => { return i.value == formData.get("value") });
+				additionalInfo = product.text;
 			}	
 
 			let response = yield call(callApi, "landingPage", {
@@ -142,7 +142,7 @@ function* onDelete() {
 
 		try {
 			let formData = yield select(getStateData);
-			let response = yield call(callApi, "features", {
+			let response = yield call(callApi, "landingPage", {
 				method: 'DELETE',
 				body: JSON.stringify({
 					'id': id
@@ -153,7 +153,7 @@ function* onDelete() {
 			});
 
 			if (response.completed && response.data.success) {
-
+				
 				let list = formData.get("lstLandingPage").toArray();
 				_.remove(list, (i) => { return i.id == id });
 
@@ -189,8 +189,7 @@ function getCallbacks(formData, name, value) {
 	switch (name) {
 
 		case INITALIZE:
-
-			return [getCategories, getProductList];
+			return [getCategories, getProductList, getLatestProducts, getProductVideos];
 
 		default:
 			return []

@@ -1676,12 +1676,11 @@ ul.bs-glyphicons-list {
 	-ms-transition: .5s all;
 } 
 .team-right {
-    float: right;
-    width: 67%;
+    width: 70%;
     padding: 2.6em 2em;
-    -webkit-box-shadow: 1px 2px 6px 0px #ccc;
-    -moz-box-shadow: 1px 2px 6px 0px #ccc; 
-	box-shadow: 1px 2px 6px 0px #ccc;
+    -webkit-box-shadow: rgba(21, 20, 20, 0.24) 1px 2px 6px 2px;
+    -moz-box-shadow: rgba(21, 20, 20, 0.24) 1px 2px 6px 2px;
+	box-shadow: rgba(21, 20, 20, 0.24) 1px 2px 6px 2px;
 }
 .team-right h4 {
     font-size: 1.5em;
@@ -1951,10 +1950,10 @@ ul.bs-glyphicons-list {
     float: none; 
 }
 .navbar-default .navbar-toggle {
-    border-color: #01edc9;
+    border-color: #4a142e
 }
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #01edc9;
+    background-color: #4a142e
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
     background-color: #ffffff;
@@ -1963,7 +1962,7 @@ div#bs-example-navbar-collapse-1 {
     width: 100%;
     position: absolute;
     left: 0;
-    background: #fff;
+    background: #4a142e;
     z-index: 9999;
     text-align: center;
 }
@@ -2416,7 +2415,10 @@ img.img-responsive {
     padding-left: 0;
 }
 .features-w3grid-right{
-	padding-right:0;
+    padding-right:0;
+}
+.features-category {
+    margin-top: 10px
 }
 .work-agileinfo h3 {
     font-size: 1.7em;
