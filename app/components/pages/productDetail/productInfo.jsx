@@ -36,9 +36,9 @@ export default class ProdutInfo extends React.Component {
                         {
                             productInfo.images[0] ?
                                 <img src={"assets/uploads/" + productInfo.images[0].path} />
-
                                 : <img src={"assets/images/no-image-available.png"} />
                         }
+
 
 
 
@@ -50,9 +50,10 @@ export default class ProdutInfo extends React.Component {
                                 starCount={10}
                                 onStarClick={this.onStarClick.bind(this)}
                             />
-
                         </div> */}
-
+                        <div>
+                            <a href="/#/contact" className={Styles.enquire}>Enquire</a>
+                        </div>
                     </div>
 
                     <div className="col-lg-9 col-md-10 col-xs-12 col-sm-12">
@@ -152,7 +153,7 @@ export default class ProdutInfo extends React.Component {
                                                     productInfo.videos.map((i, index) => {
                                                         return <li key={index}>
 
-                                                            <VideoWrapper width="250" height="250" path={i.path} allowfullscreen></VideoWrapper></li>
+                                                            <VideoWrapper width="350" height="350" path={i.path} allowfullscreen></VideoWrapper></li>
                                                     })
                                                 }
                                             </ul>

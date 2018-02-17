@@ -12,19 +12,19 @@ export default class VideoWrapper extends React.Component {
 
     render() {
 
-        return <div>
+        return this.props.path ?  <div>
             
             {
                 this.getPopup()
             }
 
-            <div style={{ 'width': this.props.width, 'height': this.props.height }} onClick={(e) => { this.showVideo(e, this.props.path) }} className={Styles.overlay}> 
+            <div style={{ 'width': this.props.width, 'height': this.props.height }} onClick={(e) => { this.showVideo(e, this.props.path) }} > 
            
-                 <iframe src={this.props.path} width={this.props.width} height={this.props.height} allowfullscreen></iframe>
+                 <video controls src={"/assets/uploads/" + this.props.path} width={this.props.width} height={this.props.height} allowfullscreen></video>
             
             </div>
 
-        </div>
+        </div>: ""
     }
 
     componentDidUpdate  () {

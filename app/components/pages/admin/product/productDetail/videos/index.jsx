@@ -13,6 +13,7 @@ import Textarea from 'presentational/Textarea';
 import { INPUT_CHANGE, INIT_MODULE, SUBMIT_ITEM, CLEAR_FORM, EDIT_ITEM, DELETE_ITEM } from 'constants/admin/videos';
 import { alertError } from 'utils/notification';
 import validate from 'validate.js';
+import FileUpload from 'presentational/Fileupload';
 
 class Videos extends React.Component {
 
@@ -27,8 +28,11 @@ class Videos extends React.Component {
 
                     <Row>
 
-                        <ColumnGroup label="Path" size="full">
-                            <Input autoFocus={true} className="form-control tlnt-input-one" name="path" value={this.props.data.get("path")} placeholder="Enter path" onChange={this.props.onChange} />
+                        <ColumnGroup label="Select Video" size="full">
+
+                            <FileUpload name="VideoPath" className="form-control tlnt-input-one" supportedExtensions={[]}
+                                value={this.props.data.get("VideoPath")} onChange={this.props.onChange} />
+
                         </ColumnGroup>
 
                         <ColumnGroup label="Description" size="full">

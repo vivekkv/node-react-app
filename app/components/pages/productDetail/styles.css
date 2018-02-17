@@ -1,7 +1,7 @@
     
 
 .header {
-    background: #fe8f27;
+    background: #000000;
     padding: 10px 10px;
     color: #fff;
     margin-bottom: 20px;
@@ -86,4 +86,14 @@
 .video_list li {
     margin: 5px;
     display: inline
+}
+
+.enquire {
+    margin-top: 14px;
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 18px;
+    cursor: pointer;
 }

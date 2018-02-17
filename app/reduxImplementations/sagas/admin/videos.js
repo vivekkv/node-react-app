@@ -45,38 +45,55 @@ function* onSubmit() {
             let formData = yield select(getStateData);
             let productFormData = yield select(productState);
 
-            let response = yield call(callApi, "videos", {
-                method: 'POST',
-                body: JSON.stringify({
-                    'id': formData.get("id"),
-                    'product_id': productFormData.get("product_id"),
-                    'description': formData.get("description"),
-                    'path': formData.get("path"),
-                }),
-                headers: {
-                    'Content-Type': 'application/json;charset=UTF-8'
+            let fileUpload = new FormData();
+			fileUpload.append("file", formData.get("VideoPath").file);
+
+			let videoResponse = yield call(callApi, "upload", {
+				method: 'POST',
+				body: fileUpload,
+				headers: {
+					'enctype': "multipart/form-data"
+				}
+            })
+            
+            if (videoResponse.completed && videoResponse.data.success) { 
+
+                let response = yield call(callApi, "videos", {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        'id': formData.get("id"),
+                        'product_id': productFormData.get("product_id"),
+                        'description': formData.get("description"),
+                        'path': videoResponse.data.data.file.filename,
+                    }),
+                    headers: {
+                        'Content-Type': 'application/json;charset=UTF-8'
+                    }
+                });
+    
+                if (response.completed && response.data.success) {
+    
+                    yield put(reduxAction(CLEAR_FORM));
+    
+                    let list = formData.get("videosList").toArray();
+    
+                    if (formData.get("id")) {
+    
+                        let item = _.find(list, (i) => { return i.id == formData.get("id") });
+                        _.extend(item, response.data.data);
+    
+                    } else {
+    
+                        list.push(response.data.data)
+                    }
+    
+                    yield put(reduxAction(SET_FORM, { 'data': { 'videosList': List(list) } }))
+    
                 }
-            });
-
-            if (response.completed && response.data.success) {
-
-                yield put(reduxAction(CLEAR_FORM));
-
-                let list = formData.get("videosList").toArray();
-
-                if (formData.get("id")) {
-
-                    let item = _.find(list, (i) => { return i.id == formData.get("id") });
-                    _.extend(item, response.data.data);
-
-                } else {
-
-                    list.push(response.data.data)
-                }
-
-                yield put(reduxAction(SET_FORM, { 'data': { 'videosList': List(list) } }))
 
             }
+
+            
 
             alertResponse(response);
 
