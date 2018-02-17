@@ -3200,6 +3200,6 @@ img.img-responsive {
     bottom: 0;
     right: 0;
     display: none;
-    z-index: 3;
+    z-index: 1000;
     background: #cb7c4817;
   }
