@@ -2,7 +2,7 @@ import { take, call, put, select, fork, race } from 'redux-saga/effects';
 import { Map, List } from 'immutable';
 import { bindInputChange } from 'reduxImplementations/reduxStateHelper';
 import reduxAction from 'reduxImplementations/reduxActionHelper';
-import { alertResponse } from 'utils/notification';
+import { alertResponse, showLoader, hideLoader } from 'utils/notification';
 import { callApi } from 'utils/request';
 import { logError } from 'utils/errorLog';
 import { getVideos, getAllVideos } from 'services/videos';
@@ -44,6 +44,8 @@ function* onSubmit() {
 
             let formData = yield select(getStateData);
             let productFormData = yield select(productState);
+
+            showLoader();
 
             let fileUpload = new FormData();
 			fileUpload.append("file", formData.get("VideoPath").file);
@@ -93,8 +95,7 @@ function* onSubmit() {
 
             }
 
-            
-
+            hideLoader();
             alertResponse(response);
 
         } catch (e) {
