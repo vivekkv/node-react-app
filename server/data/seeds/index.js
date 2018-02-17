@@ -6,7 +6,7 @@ exports.seed = function (knex, Promise) {
     ])
         .then(function () {
             return Promise.all([
-                knex('users').insert([{ 'id': uuid.v1(), 'username': 'admin', 'password': "admin", "active": true }]),
+                knex('users').insert([{ 'id': uuid.v1(), 'username': 'sarahstechno', 'password': "sarahstechno@#123", "active": true }]),
             ]);
         })
         .catch(function (err) {

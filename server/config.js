@@ -1,6 +1,6 @@
 module.exports = {
-    contactMailAddress: "vivekkv@outlook.com",
+    contactMailAddress: "sarahstechno@gmail.com",
     user: 'vivekkv2120@gmail.com',
     pass: 'ThisIsMyPassword123',
-    mailSubject: "Contact from website"
+    mailSubject: "SARAH' TECHNO ENQUIRY"
 }
