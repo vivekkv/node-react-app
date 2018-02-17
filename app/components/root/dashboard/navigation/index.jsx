@@ -50,6 +50,9 @@ class Navigation extends React.Component {
                         <li>
                             <a href="/admin/#/dashboard/product"><i className="fa fa-table fa-fw"></i> Product</a>
                         </li>
+                        <li>
+                            <a href="/admin/#/dashboard/landingPage"><i className="fa fa-table fa-fw"></i>Landing Page</a>
+                        </li>
                     </ul>
                 </div>
             </div>

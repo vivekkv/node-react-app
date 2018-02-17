@@ -18,13 +18,13 @@ module.exports = class AboutUs extends React.Component {
 
             <div className="container">
 
-                <p className={Styles.listParagraph}>Complet turnkey projects we are voluter</p>
+                <p className={Styles.listParagraph}>Complete turnkey projects we are under taking</p>
                 
                 <ul className={Styles.list}>
                     <li>Automate rice floor plant</li>       
                     <li>Fruit Processing Plant</li>       
-                    <li>Automate rice floor plant</li>       
-                    <li>Automate rice floor plant</li>       
+                    <li>Spices Processing Plant</li>       
+                    <li>Distillation extraction plant for spices and herbbs</li>       
                 </ul>
 
             </div>

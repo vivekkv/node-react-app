@@ -20,7 +20,6 @@ export default class Categories extends React.Component {
         let products = this.props.data.get("productList").toArray();
         products.unshift({ 'text': "Select Product", 'value': "0" })
         let landingPageCategories = _.filter(this.props.data.get("lstLandingPage").toArray(), (i) => { return i.type == "PRODUCTS" })
-
         return <Row>
 
             <Form onSubmit={this.onSubmit.bind(this)} onReset={this.props.onReset}>

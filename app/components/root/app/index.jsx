@@ -28,6 +28,7 @@ class App extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
+        
        if(JSON.stringify(this.props.landingPage.get("lstLandingPage").toArray()) != JSON.stringify(nextProps.landingPage.get("lstLandingPage").toArray())) {
          this.props.loadPageContent();
        }
