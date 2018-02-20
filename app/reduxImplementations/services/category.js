@@ -32,7 +32,9 @@ export function getMetisMenu() {
 			method: "GET"
 		}).then((response) => {
 
+			debugger
 			if (response.completed && response.data.success) {
+
 				resolve({ 'metisMenu': List(response.data.data) });
 
 			} else {

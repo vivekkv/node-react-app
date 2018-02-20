@@ -42,27 +42,35 @@ function* loadProducts() {
 
 	while (true) {
 
-		const { category } = yield take(LOAD_PRODUCTS);
-		let formData = yield select(getStateData);
+		try {
 
-		let productDetails = yield call(getProductDetails);
-		let metisMenuResponse = yield call(getMetisMenu);
-		let firstCategoryNode = getFirstCategory(metisMenuResponse.metisMenu.toArray());
+			const { category } = yield take(LOAD_PRODUCTS);
+			let formData = yield select(getStateData);
 
-		if (firstCategoryNode) {
+		    let productDetails = yield call(getProductDetails);
+		    let metisMenuResponse = yield call(getMetisMenu);
+		    let firstCategoryNode = getFirstCategory(metisMenuResponse.metisMenu.toArray());
 
-			let to = firstCategoryNode.to.replace("/#", "");
-			let categoryProductList = getCategoryProducts((category ? category : firstCategoryNode.id), productDetails.productList);
+			if (firstCategoryNode) {
 
-			yield put(reduxAction(SET_FORM, {
-				'data': {
-					'metisMenu': metisMenuResponse.metisMenu,
-					'productList': productDetails.productList,
-					'defaultCategory': firstCategoryNode.to,
-					'categoryProductList': List(categoryProductList)
-				}
-			}));
+				let to = firstCategoryNode.to.replace("/#", "");
+				let categoryProductList = getCategoryProducts((category ? category : firstCategoryNode.id), productDetails.productList);
 
+				yield put(reduxAction(SET_FORM, {
+					'data': {
+						'metisMenu': metisMenuResponse.metisMenu,
+						'productList': productDetails.productList,
+						'defaultCategory': firstCategoryNode.to,
+						'categoryProductList': List(categoryProductList)
+					}
+				}));
+
+			}
+
+		}
+		catch(e) {
+
+			console.log(e)
 		}
 	}
 }
@@ -76,10 +84,10 @@ function* loadCategoryProducts() {
 		let formData = yield select(getStateData);
 		let defaultMenu = formData.get('defaultCategory');
 		let productList = [];
-		let menuList    = [];
+		let menuList = [];
 		let categoryProducts = [];
 
-		if(formData.get("productList").size == 0) {
+		if (formData.get("productList").size == 0) {
 
 			let productDetails = yield call(getProductDetails);
 			productList = productDetails.productList;
@@ -91,16 +99,16 @@ function* loadCategoryProducts() {
 			categoryProducts = getCategoryProducts(categoryId, productList);
 		}
 
-		if(formData.get("metisMenu").size == 0) {
+		if (formData.get("metisMenu").size == 0) {
 
 			let metisMenuResponse = yield call(getMetisMenu);
 			menuList = metisMenuResponse.metisMenu;
-			defaultMenu  = getDefaultMenu(categoryId, menuList.toArray());
+			defaultMenu = getDefaultMenu(categoryId, menuList.toArray());
 
 		} else {
 
 			menuList = formData.get("metisMenu");
-			defaultMenu  = getDefaultMenu(categoryId, menuList.toArray());
+			defaultMenu = getDefaultMenu(categoryId, menuList.toArray());
 		}
 
 		yield put(reduxAction(SET_FORM, {

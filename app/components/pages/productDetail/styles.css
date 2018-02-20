@@ -48,7 +48,7 @@
 }
 
 .list_wrapper ul li {
-    line-height: 35px
+    line-height: 35px;
 }
 
 .note_text {
@@ -85,7 +85,7 @@
 
 .video_list li {
     margin: 5px;
-    display: inline
+    display: inline-block
 }
 
 .enquire {

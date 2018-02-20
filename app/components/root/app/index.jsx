@@ -51,6 +51,8 @@ const mapDispatchToProps = (dispatch, ownState) => {
     return {
         dispatch,
         loadPageContent: function (type) {
+
+            debugger
             dispatch(reduxAction(LOAD_PAGE_CONTENT, { 'pageType': type }))
         }
     }

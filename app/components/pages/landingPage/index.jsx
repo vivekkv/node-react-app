@@ -61,6 +61,7 @@ let mapDispatchToProps = function (dispatch) {
             dispatch(reduxAction(SUBMIT_CONTACT));
         },
         loadPageContent: function (type) {
+            debugger
             dispatch(reduxAction(LOAD_PAGE_CONTENT, { 'pageType': type }))
         },
         initLandingPage: function() {

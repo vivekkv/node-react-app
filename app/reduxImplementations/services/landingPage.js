@@ -10,6 +10,7 @@ export function getLandingPageContent(type) {
             method: "GET"
         }).then((response) => {
 
+            debugger
             if (response.completed && response.data.success) {
 
                 resolve({ 'lstLandingPage': List(response.data.data) });

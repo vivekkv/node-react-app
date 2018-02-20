@@ -92,6 +92,8 @@ let mapDispatchToProps = function (dispatch) {
             dispatch(reduxAction(SUBMIT_ITEM, { 'pageType': type }));
         },
         loadPageContent: function (type) {
+            debugger
+            
             dispatch(reduxAction(LOAD_PAGE_CONTENT, { 'pageType': type }))
         },
         onDelete: function (id) {

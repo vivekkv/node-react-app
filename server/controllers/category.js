@@ -130,7 +130,7 @@ function getCategories(req, res) {
 
             } else {
 
-                res.json(categoryList)
+                res.json({ 'success': true, 'data': categoryList });
             }
 
         })
@@ -149,8 +149,6 @@ function getFooterCategories() {
             let footerCategories = [];
 
             if (categories.length > 0) {
-
-                
 
                 res.json({ 'success': true, 'data': categoryList });
 
