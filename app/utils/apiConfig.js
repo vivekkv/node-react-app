@@ -1,3 +1,3 @@
 module.exports = {
-    serviceBase: "http://www.sarahstechno.com/",
+    serviceBase: "http://139.59.38.147:80/",
 }
