@@ -12,6 +12,13 @@ var bodyParser = require('body-parser')
 
 const app = express();
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+
 app.use(compression());
 app.use('/dist', express.static(path.join(__dirname, '../dist')));
 app.use('/assets', express.static(path.join(__dirname, './assets')));
@@ -74,7 +81,7 @@ app.use('/upload', require('./routes/upload'));
 app.use('/users', require('./routes/users'));
 app.use('/landingPage', require('./routes/landingPage'));
 
-const port = isDeveloping ? 70 : process.env.PORT;
+const port = isDeveloping ? 80 : process.env.PORT;
 app.listen(port, '0.0.0.0', function onStart(err) {
 
   if (err) {
