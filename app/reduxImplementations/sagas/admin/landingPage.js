@@ -177,7 +177,7 @@ function* loadPageContent() {
 		let formData = yield select(getStateData);
 		debugger
 		
-		if(formData.get("lstLandingPage").size == 0) {
+		if(formData.get("lstLandingPage").size == 0 && data && data.lstLandingPage) {
 
 			let data = yield call(getLandingPageContent, pageType)
 			yield put(reduxAction(SET_FORM, { 'data': { 'lstLandingPage': data.lstLandingPage } }));
