@@ -1,6 +1,7 @@
 const path = require('path');
 const compression = require('compression')
 const express = require('express');
+var cors = require('cors')
 const webpack = require('webpack');
 const mime = require('mime');
 const fs   = require("fs");
@@ -12,13 +13,13 @@ var bodyParser = require('body-parser')
 
 const app = express();
 
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
+// app.use(function(req, res, next) {
+//   res.header("Access-Control-Allow-Origin", "*");
+//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//   next();
+// });
 
-
+app.use(cors())
 app.use(compression());
 app.use('/dist', express.static(path.join(__dirname, '../dist')));
 app.use('/assets', express.static(path.join(__dirname, './assets')));

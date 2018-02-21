@@ -22,6 +22,7 @@
     "babel-core": "^6.22.1",
     "body-parser": "^1.18.2",
     "compression": "^1.7.1",
+    "cors": "^2.8.4",
     "flag-icon-css": "^2.8.0",
     "griddle-react": "0.7.1",
     "immutable": "^3.8.1",
