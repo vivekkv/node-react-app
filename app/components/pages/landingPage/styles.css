@@ -20,6 +20,10 @@
     margin: 5px 0
 }
 
+.latest_products {
+    overflow: hidden;
+}
+
 .latest_products img {
     width: 250px;
     height: 250px

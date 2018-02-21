@@ -8,7 +8,9 @@ export default class VideoGallery extends React.Component {
         let videos = this.props.landingPage.get("lstLastestVideos").toArray();
 
         return <div className="container-fluid" style={{ "max-height": "400px", "overflow": "hidden", "overflow-y": "scroll" }}>
-
+ <div className="w3ls-title">
+                    <h3 className="agileits-title">Videos</h3>
+                </div>
             <div className="row">
 
                 {
