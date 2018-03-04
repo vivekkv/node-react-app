@@ -12,7 +12,7 @@ export default class Map extends React.Component {
                 <h4><span className="glyphicon glyphicon-home" aria-hidden="true"></span> Address</h4>
                 <p>Aloor, Vellanchira P.O., Thrissur Dist, Kerala State, India 680697</p>
                 <h4><span className="glyphicon glyphicon-phone" aria-hidden="true"></span>Phone</h4>
-                <p> +91 480 3209827, 2786655, Mob: 09349165966 </p>
+                <p> 0480 2786655, Mob: +91 9349165966 </p>
                 <h4><span className="glyphicon glyphicon-envelope" aria-hidden="true"></span>Email</h4>
                 <p className="agile-last"><a href="mailto:sarahstechno@gmail.com">sarahstechno@gmail.com</a></p>
             </div>

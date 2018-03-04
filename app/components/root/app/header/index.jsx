@@ -18,7 +18,7 @@ export default class Header extends React.Component {
                     </button>
                     <div className="header-right wthree">
                         <div className="top-nav-text">
-                            <p>Call Us: <span>+91 480 3209827, 2786655 Mob: 09349765966</span></p>
+                            <p>Call Us: <span>+91 0480 2786655, Mob: +91 9349165966</span></p>
                             <div id="sb-search" className="sb-search">
                                 {/* <form action="#" method="post">
                                     <input type="search" className="sb-search-input" name="Search" placeholder="Enter your search term..." id="search" required="" />

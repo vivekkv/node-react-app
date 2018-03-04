@@ -40,7 +40,13 @@ body a:hover,body a:focus{
 }
 .navbar-header h1 img {
     margin-right: 0.3em;
+    width: 135px;
+    position: fixed;
+    left: 50%;
+    z-index: 1;
 }
+
+
 .navbar-header h1 a {
     color: #00b3fe;
     text-decoration: none;
@@ -108,7 +114,8 @@ nav.navbar.navbar-default {
     margin: 0.5em 0 0;
     padding-bottom: 1.5em;
     position: relative;
-    border-bottom: 2px solid #de8d2b
+    text-align: right
+
 }
 .top-nav-text p {
     font-size:1.1em;
@@ -946,9 +953,10 @@ h3.w3ls-title{
     color: #fff;
 }
 .header p {
-    font-size:1em;
-    color: #fff; 
-    line-height:1.8em; 
+     font-size: 1em;
+    color: #ffffff;
+    line-height: 1.8em;
+    font-weight: bold;
 }
 .work-agileinfo p {
     color: #fff;
