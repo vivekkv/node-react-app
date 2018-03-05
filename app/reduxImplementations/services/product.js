@@ -35,6 +35,7 @@ export function getProductInfo(productId) {
 
             if (response.completed && response.data.success) {
 
+                debugger
                 resolve({ 'productInfo': response.data.data });
 
             } else {

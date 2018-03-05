@@ -113,55 +113,61 @@ function getProducts(req, res) {
             let products = [];
             let counter = 0;
 
-            if(data.length > 0) {
+            if (data.length > 0) {
 
                 data.forEach((d) => {
 
                     getCategory(d.category_id).then((category) => {
-    
+
                         d.category = category;
-    
+
                         getFeatures(d.id).then((features) => {
-    
+
                             d.features = features;
-    
+
                             getCapacity(d.id).then((capacity) => {
-    
+
                                 d.capacity = capacity;
-    
-                                getSuitableFor(d.id).then((suitableFor) => {
-    
-                                    d.suitableFor = suitableFor;
-    
-                                    getVideos(d.id).then((videos) => {
-    
-                                        d.videos = videos;
-    
-                                        getImages(d.id).then((images) => {
-    
-                                            d.images = images;
-    
-                                            getTotalRatings(d.id).then((totalratings) => {
-    
-                                                d.productRating = totalratings;
-                                                products.push(d);
-                                                counter++;
-    
-                                                if (counter == data.length) {
-    
-                                                    res.json({ 'success': true, data: products });
-                                                }
-    
-                                            })
-    
+
+                                getAttachments(d.id).then((attachments) => {
+
+                                    d.attachments = attachments;
+
+                                    getSuitableFor(d.id).then((suitableFor) => {
+
+                                        d.suitableFor = suitableFor;
+
+                                        getVideos(d.id).then((videos) => {
+
+                                            d.videos = videos;
+
+                                            getImages(d.id).then((images) => {
+
+                                                d.images = images;
+
+                                                getTotalRatings(d.id).then((totalratings) => {
+
+                                                    d.productRating = totalratings;
+                                                    products.push(d);
+                                                    counter++;
+
+                                                    if (counter == data.length) {
+
+                                                        res.json({ 'success': true, data: products });
+                                                    }
+
+                                                })
+
+                                            });
+
                                         });
-    
+
                                     });
-    
+
                                 });
-    
+
                             });
-    
+
                         });
                     })
                 });
@@ -171,7 +177,7 @@ function getProducts(req, res) {
                 res.json({ 'success': true, 'data': [] });
             }
 
-            
+
 
         })
         .catch(function (error) {
@@ -220,25 +226,32 @@ function getProductInfo(req, res) {
 
                         d.capacity = capacity;
 
-                        getSuitableFor(d.id).then((suitableFor) => {
+                        getAttachments(d.id).then((attachments) => {
 
-                            d.suitableFor = suitableFor;
 
-                            getVideos(d.id).then((videos) => {
+                            d.attachments = attachments;
 
-                                d.videos = videos;
+                            getSuitableFor(d.id).then((suitableFor) => {
 
-                                getImages(d.id).then((images) => {
+                                d.suitableFor = suitableFor;
 
-                                    d.images = images;
+                                getVideos(d.id).then((videos) => {
 
-                                    getTotalRatings(d.id).then((totalratings) => {
+                                    d.videos = videos;
 
-                                        d.productRating = totalratings;
+                                    getImages(d.id).then((images) => {
 
-                                        res.json({ 'success': true, data: d });
+                                        d.images = images;
 
-                                    })
+                                        getTotalRatings(d.id).then((totalratings) => {
+
+                                            d.productRating = totalratings;
+
+                                            res.json({ 'success': true, data: d });
+
+                                        })
+
+                                    });
 
                                 });
 
@@ -301,6 +314,24 @@ function getCapacity(productId) {
     return new Promise((resolve, reject) => {
 
         db("capacity")
+            .where({ 'product_id': productId })
+            .then((data) => {
+
+                resolve(data);
+            })
+            .catch(function (error) {
+
+                resolve([]);
+
+            });
+    });
+}
+
+function getAttachments(productId) {
+
+    return new Promise((resolve, reject) => {
+
+        db("attachments")
             .where({ 'product_id': productId })
             .then((data) => {
 

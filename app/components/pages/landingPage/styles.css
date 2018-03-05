@@ -32,3 +32,18 @@
 .latest_products p {
 
 }
+
+.slider_content {
+    text-align: center;
+    height: 350px;
+}
+
+.slider_content img{
+    width: 300px;
+    display: inline-block;
+}
+
+.slider_content h3 {
+    display: inline-block;
+    color: white;
+}

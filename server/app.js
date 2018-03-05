@@ -81,6 +81,7 @@ app.use('/videos', require('./routes/videos'));
 app.use('/upload', require('./routes/upload'));
 app.use('/users', require('./routes/users'));
 app.use('/landingPage', require('./routes/landingPage'));
+app.use('/attachments', require('./routes/attachments'));
 
 const port = isDeveloping ? 80 : process.env.PORT;
 app.listen(port, '0.0.0.0', function onStart(err) {

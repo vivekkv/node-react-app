@@ -70,6 +70,11 @@ exports.up = function (knex, Promise) {
         table.string('value');
         table.string('additionalInfo');
         table.timestamps();
+    }).createTable('attachments', function (table) {
+        table.uuid('id').primary();
+        table.integer('product_id');
+        table.integer('attachment');
+        table.timestamps();
     });
 };
 

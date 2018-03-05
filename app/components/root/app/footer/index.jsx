@@ -22,7 +22,7 @@ export default class Footer extends React.Component {
                     </div> */}
 
                     <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <div className={Styles.footer_category_item}>
+                        {/* <div className={Styles.footer_category_item}>
 
                             <label>Categories</label>
 
@@ -36,7 +36,7 @@ export default class Footer extends React.Component {
 
                             </ul>
 
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">

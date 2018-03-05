@@ -127,7 +127,7 @@ function* onDelete() {
         try {
 
             let formData = yield select(getStateData);
-            let response = yield call(callApi, "videos", {
+            let response = yield call(callApi, "capacity", {
                 method: 'DELETE',
                 body: JSON.stringify({
                     'id': id

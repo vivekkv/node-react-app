@@ -41,8 +41,6 @@ body a:hover,body a:focus{
 .navbar-header h1 img {
     margin-right: 0.3em;
     width: 135px;
-    position: fixed;
-    left: 50%;
     z-index: 1;
 }
 
@@ -707,7 +705,7 @@ p {
 }  
 h3.agileits-title{
     color: #000;
-    font-size: 3em;
+    font-size: 28px;
     font-weight: 700;
     margin-bottom: 0.8em;
     text-transform: capitalize;
@@ -3249,7 +3247,7 @@ img.img-responsive {
     top: 0;
     height: 100%;
     cursor: pointer;
-    width: 50px;
+    width: 30px;
   }
   .rsc-navigation_left {
     left: 0;

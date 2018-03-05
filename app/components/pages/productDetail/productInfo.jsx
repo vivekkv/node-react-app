@@ -89,7 +89,7 @@ export default class ProdutInfo extends React.Component {
                             <div className="col-lg-6 col-md-6 col-xs-12 col-sm-12">
 
                                 {
-                                    productInfo.capacity.length > 0 ?
+                                    productInfo.attachments.length > 0 ?
 
                                         <div className={Styles.list_wrapper}>
 
@@ -97,8 +97,8 @@ export default class ProdutInfo extends React.Component {
 
                                             <ul>
                                                 {
-                                                    productInfo.capacity.map((i, index) => {
-                                                        return <li key={index}>{i.capacity}</li>
+                                                    productInfo.attachments.map((i, index) => {
+                                                        return <li key={index}>{i.attachment}</li>
                                                     })
                                                 }
                                             </ul>
@@ -110,12 +110,6 @@ export default class ProdutInfo extends React.Component {
                             </div>
 
 
-
-
-                        </Row>
-
-                        <Row>
-
                             <div className="col-lg-6 col-md-6 col-xs-12 col-sm-12">
 
                                 {
@@ -125,7 +119,35 @@ export default class ProdutInfo extends React.Component {
 
                                             <h4>Ideal For</h4>
 
-                                            <p>{productInfo.suitableFor.map((i) => { return i.description }).join(", ")}</p>
+                                            <ul>
+                                                {
+                                                    productInfo.suitableFor.map((i, index) => {
+                                                        return <li key={index}>{i.description}</li>
+                                                    })
+                                                }
+                                            </ul>
+
+                                        </div> : null
+
+                                }
+                            </div>
+
+                            <div className="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+
+                               {
+                                    productInfo.capacity.length > 0 ?
+
+                                        <div className={Styles.list_wrapper}>
+
+                                            <h4>Capacity</h4>
+
+                                            <ul>
+                                                {
+                                                    productInfo.capacity.map((i, index) => {
+                                                        return <li key={index}>{i.capacity}</li>
+                                                    })
+                                                }
+                                            </ul>
 
 
                                         </div> : null

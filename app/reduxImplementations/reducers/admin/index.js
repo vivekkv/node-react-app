@@ -10,6 +10,7 @@ import suitableFor from './suitableFor';
 import videos from './videos';
 import auth from './auth';
 import landingPage from './landingPage';
+import attachments from './attachments';
 
 export default combineReducers({
     'category': category,
@@ -22,5 +23,6 @@ export default combineReducers({
     'suitableFor': suitableFor,
     'contact': contact,
     'auth': auth,
-    'landingPage': landingPage
+    'landingPage': landingPage,
+    'attachments': attachments
 });

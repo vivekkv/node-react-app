@@ -11,6 +11,7 @@ import productDetail from './productDetail';
 import portfolio from './portfolio';
 import contact from './contact';
 import landingPage from './landingPage';
+import attachments from './attachments';
 
 const sagas = function* root() {
 
@@ -26,7 +27,8 @@ const sagas = function* root() {
         fork(productDetail),
        // fork(portfolio),
         fork(contact),
-        fork(landingPage)
+        fork(landingPage),
+        fork(attachments)
     ]
 }  
 

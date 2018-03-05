@@ -14,6 +14,7 @@ import Popup from 'presentational/Popup';
 import ProductFeatures from './features';
 import SuitableFor from './suitableFor';
 import Videos from './videos';
+import Attachments from './attachments';
 import Capacity from './capacity';
 import Images from './images';
 import { INPUT_CHANGE, INIT_MODULE, SUBMIT_ITEM, CLEAR_FORM, EDIT_ITEM, DELETE_ITEM } from 'constants/admin/product';
@@ -49,23 +50,30 @@ export default class ProductDetail extends React.Component {
 
                         </Tab>
 
-                        <Tab eventKey={5} title="Images">
+                        <Tab eventKey={3} title="Images">
 
                             <Images productId={this.props.data.get("product_id")} />
 
-	                    </Tab>
+                        </Tab>
 
-                        <Tab eventKey={3} title="Videos" >
+                        <Tab eventKey={4} title="Videos" >
 
                             <Videos productId={this.props.data.get("product_id")} />
 
                         </Tab>
 
-                        <Tab eventKey={4} title="Attachments" >
+                        <Tab eventKey={5} title="Attachments" >
+
+                            <Attachments productId={this.props.data.get("product_id")} />
+
+                        </Tab>
+
+                        <Tab eventKey={6} title="Capacity" >
 
                             <Capacity productId={this.props.data.get("product_id")} />
 
                         </Tab>
+
 
 
                     </Tabs>

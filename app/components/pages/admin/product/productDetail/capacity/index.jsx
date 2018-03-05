@@ -19,7 +19,7 @@ class Capacity extends React.Component {
     render() {
 
       
-        return <Card title="Attachments" icon="fa-pencil">
+        return <Card title="Capacity" icon="fa-pencil">
     
             <Row>
 
@@ -27,7 +27,7 @@ class Capacity extends React.Component {
 
                     <Row>
 
-                        <ColumnGroup label="Attachment" size="full">
+                        <ColumnGroup label="Capacity" size="full">
                             <Input autoFocus={true} className="form-control tlnt-input-one" name="capacity" value={this.props.data.get("capacity")} placeholder="Enter capacity" onChange={this.props.onChange} />
                         </ColumnGroup>
 
