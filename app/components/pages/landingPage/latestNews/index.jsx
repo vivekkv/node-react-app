@@ -11,10 +11,22 @@ export default class LatestNews extends React.Component {
         var settings = {
             dots: true,
             infinite: true,
-            speed: 500,
+            speed: 50000,
             slidesToShow: 1,
             slidesToScroll: 1
         };
+
+        debugger
+
+        // if(latestProducts.length > 0) {
+
+        //     latestProducts.push(latestProducts[0])
+        //     latestProducts.push(latestProducts[0])
+        //     latestProducts.push(latestProducts[0])
+        //     latestProducts.push(latestProducts[0])
+            
+        // }
+
 
         return <div className="news-section">
             <div className="container-fluid">
@@ -25,11 +37,16 @@ export default class LatestNews extends React.Component {
                     <h3 className="agileits-title">Latest Products</h3>
                 </div>
 
-                    <Slider images={latestProducts.map((i) => { return '/assets/uploads/' + i.path })} isInfinite delay={5000}>
+                    <Slider images={latestProducts.map((i) => { return '/assets/uploads/' + i.path })} isInfinite delay={2000}>
 
                         {
                             latestProducts.map((product, index) => {
-                                return <a key={index} href={"/#/product/detail/" + product.category_id + "/" + product.id}><img src={'/assets/uploads/' + product.path} /></a>
+                                return <div className={Styles.carosuelItem}>
+
+                                    <a key={index} href={"/#/product/detail/" + product.category_id + "/" + product.id}><img src={'/assets/uploads/' + product.path} /></a>
+                                    <h6>{product.name}</h6>
+
+                                </div>
                             })
                         }
 
@@ -38,5 +55,13 @@ export default class LatestNews extends React.Component {
                 </div>
             </div>
         </div>
+    }
+
+    componentDidMount() {
+        
+        setInterval(function() {
+            document.getElementsByClassName("rsc-navigation_right")[0].click()
+        }, 2000);
+
     }
 }

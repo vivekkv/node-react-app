@@ -38,7 +38,7 @@ export default class Slider extends React.Component {
                 </Carousel.Item>
 
                  <Carousel.Item>
-                    <div className={Styles.slider_content} style={{ "background": "#e8a477" }}>
+                    <div className={Styles.slider_content} >
                         <img src="/assets/images/banners/banner3.jpg" />
                         <h3>Mixer Cum Roaster</h3>
                     </div>

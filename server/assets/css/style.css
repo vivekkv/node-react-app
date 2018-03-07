@@ -33,6 +33,14 @@ body a:hover,body a:focus{
 	outline:none;
 }
 
+.navbar-header  {
+    background: none
+}
+
+.navbar-header h1 a {
+    background: none !important
+}
+
 .navbar-header h1 {
     font-size: 3em;
     font-family: 'Poppins';
@@ -695,7 +703,7 @@ nav.navbar.navbar-default {
 /*-- //news --*/
 /*-- welcome --*/
 .welcome{
-	padding: 5em 0; 
+	padding: 0 0; 
 }
 p {
     font-size: 1em;
@@ -1860,7 +1868,7 @@ ul.bs-glyphicons-list {
     margin-top: 3em;
 }
 .welcome {
-    padding: 3em 0;
+    padding: 0 0;
 }
 .slid-w3text {
     margin-bottom: 1em;
@@ -2484,7 +2492,7 @@ img.img-responsive {
     position: relative;
     margin-bottom: 20px;
     color: #fff;
-    min-height: 550px;
+    /* min-height: 550px; */
   }
   
   .metismenu>.metismenu-container>.metismenu-item>.metismenu-link {
@@ -3283,3 +3291,15 @@ img.img-responsive {
     }
   }
   
+  @media (min-width: 320px) and (max-width: 480px) {
+  
+    .carousel img {
+        width: 100px !important;
+        margin-top: 50px
+    }
+
+    .welcome-w3lleft h4 {
+        font-size: 15px
+    }
+    
+  }
