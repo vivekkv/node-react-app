@@ -175,7 +175,7 @@ export default class ProdutInfo extends React.Component {
                                                     productInfo.videos.map((i, index) => {
                                                         return <li key={index}>
 
-                                                            <VideoWrapper width="350" height="350" path={i.path} allowfullscreen></VideoWrapper></li>
+                                                            <VideoWrapper poster={productInfo.images[0] ? "assets/uploads/" + productInfo.images[0].path : null} width="350" height="350" path={i.path} allowfullscreen></VideoWrapper></li>
                                                     })
                                                 }
                                             </ul>
