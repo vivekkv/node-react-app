@@ -175,7 +175,6 @@ function* loadPageContent() {
 
 		const { pageType } = yield take(LOAD_PAGE_CONTENT);
 		let formData = yield select(getStateData);
-		debugger
 		
 		if(formData.get("lstLandingPage").size == 0 ) {
 

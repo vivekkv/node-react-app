@@ -125,7 +125,8 @@ function getProductVideos(req, res) {
         db('landingPage')
             .join("product", 'product.id', '=', 'landingPage.value')
             .join("videos", 'product.id', '=', 'videos.product_id')
-            .select(['product.id', 'product.description', 'product.category_id', 'product.name', 'videos.path'])
+            .join("images", 'product.id', '=', 'images.product_id')
+            .select(['product.id', 'product.description', 'images.path as imagePath', 'product.category_id', 'product.name', 'videos.path'])
             .limit(4).offset(0)
             .orderBy('landingPage.id', 'desc')
             .then((data) => {

@@ -21,7 +21,7 @@ class Videos extends React.Component {
                             return <figure>
                                 <a href={"/#/product/detail/" + image.category_id + "/" + image.id}>
 
-                                     <VideoWrapper path ={image.path} width={"80%"} height={"80%"}/>
+                                     <VideoWrapper poster={"/assets/uploads/" +image.imagePath} path ={image.path} width={"80%"} height={"80%"}/>
                                     <figcaption>{image.name} <p>{image.description}</p></figcaption>
 
                                 </a>

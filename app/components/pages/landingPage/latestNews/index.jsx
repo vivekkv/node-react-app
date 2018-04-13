@@ -16,18 +16,6 @@ export default class LatestNews extends React.Component {
             slidesToScroll: 1
         };
 
-        debugger
-
-        // if(latestProducts.length > 0) {
-
-        //     latestProducts.push(latestProducts[0])
-        //     latestProducts.push(latestProducts[0])
-        //     latestProducts.push(latestProducts[0])
-        //     latestProducts.push(latestProducts[0])
-            
-        // }
-
-
         return <div className="news-section">
             <div className="container-fluid">
 

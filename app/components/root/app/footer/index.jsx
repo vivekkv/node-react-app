@@ -46,6 +46,7 @@ export default class Footer extends React.Component {
                             <p>Aloor, Vellanchira P.O, Thrissur Dist, Kerala State, India - 680 697</p>
                             <p>Ph: 0480 2786655, Mob: +91 9349165966 </p>
                             <p>Email: sarahstechno@gmail.com</p>
+                            <p>GST No: 32ATOPM4400D1Z5</p>
 
                             <img src="/assets/images/logo.jpg" />
 

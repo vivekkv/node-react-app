@@ -25,8 +25,8 @@
 }
 
 .latest_products img {
-    width: 250px;
-    height: 250px
+    width: 100px;
+    height: 100px
 }
 
 .latest_products p {
@@ -39,8 +39,8 @@
 }
 
 .slider_content img{
-    width: 250px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     display: inline-block;
     margin-top: 10px
 }
@@ -48,6 +48,7 @@
 .slider_content h3 {
     display: inline-block;
     color: #000;
+    font-size: 15px;
     width: 100% !important
 }
 

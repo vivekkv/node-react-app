@@ -18,7 +18,7 @@ class Navigation extends React.Component {
                     <span className="icon-bar"></span>
                     <span className="icon-bar"></span>
                 </button>
-                <a className="navbar-brand" ><img src="/assets/images/logo.jpg" style={{ 'width': "153px", "margin-left": "85px", "margin-top": "-13px",  }} /></a>
+                <a className="navbar-brand" ><img src="/assets/images/logo.jpg" style={{ 'width': "153px", "margin-left": "50px", "margin-top": "0px",  }} /></a>
             </div>
 
             <ul className="nav navbar-top-links navbar-right">

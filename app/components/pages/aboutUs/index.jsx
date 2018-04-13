@@ -21,10 +21,10 @@ module.exports = class AboutUs extends React.Component {
                 <p className={Styles.listParagraph}>Complete turnkey projects we are under taking</p>
                 
                 <ul className={Styles.list}>
-                    <li>Automate rice floor plant</li>       
+                    <li>Automatic rice flour plant</li>       
                     <li>Fruit Processing Plant</li>       
                     <li>Spices Processing Plant</li>       
-                    <li>Distillation extraction plant for spices and herbbs</li>       
+                    <li>Distillation extraction plant for spices and herbs</li>       
                 </ul>
 
             </div>

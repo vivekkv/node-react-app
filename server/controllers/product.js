@@ -453,7 +453,8 @@ function getProductVideos(req, res) {
 
     db("product")
         .join("videos", 'product.id', '=', 'videos.product_id')
-        .select(["product.name", "videos.path", "product.id", "product.description", "product.category_id"])
+        .join("images", 'product.id', '=', 'images.product_id')
+        .select(["product.name", "videos.path", "images.path as imagePath", "product.id", "product.description", "product.category_id"])
         .orderBy('product.id', 'desc')
         .limit(15)
         .then((data) => {

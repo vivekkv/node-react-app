@@ -30,7 +30,7 @@ export default class TeamInfo extends React.Component {
                 <div className="team-info team-row2">
                     <div className="col-md-6 team-w3lsgrids">
                         <div className="team-right">
-                            <h4>Fruid Processing </h4>
+                            <h4>Fruit Processing </h4>
                         </div>
                         <div className="clearfix"> </div>
                     </div>

@@ -27,7 +27,7 @@ class Login extends React.Component {
                 <nav className="navbar navbar-default" style={{ "border": "none", "border-bottom": "4px solid #a9909c" }}>
                     <div className="container-fluid">
                         <div className="navbar-header navbar-left wthree">
-                            <h1><a><img src="/assets/images/logo.jpg" style={{ 'width': "153px", "margin-left": "85px", "margin-top": "-13px",  }} /></a></h1>
+                            <h1><a><img src="/assets/images/logo.jpg" style={{ 'width': "153px", "margin-left": "50px", "margin-top": "0px",  }} /></a></h1>
                         </div>
                     </div>
                 </nav>

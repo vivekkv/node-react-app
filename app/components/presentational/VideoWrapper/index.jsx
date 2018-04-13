@@ -9,7 +9,7 @@ export default class VideoWrapper extends React.Component {
             
             <div style={{ 'width': this.props.width, 'height': this.props.height }} > 
            
-                 <video controls="controls" controls src={"/assets/uploads/" + this.props.path+"?rel=0"} width={this.props.width} height={this.props.height} allowfullscreen></video>
+                 <video   poster={this.props.poster} controls="controls" controls src={"/assets/uploads/" + this.props.path+"?rel=0"} width={this.props.width} height={this.props.height} allowfullscreen></video>
             
             </div>
 

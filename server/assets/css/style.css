@@ -3236,6 +3236,7 @@ img.img-responsive {
   .rsc-slider-item {
     width: 100%;
     box-sizing: border-box;
+    text-align: center
   }
   .rsc-slider-item-img {
     width: 100%;
