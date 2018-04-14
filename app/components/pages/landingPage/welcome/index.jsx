@@ -9,7 +9,7 @@ export default class Welcome extends React.Component {
                
                 <div className="col-md-12 welcome-w3lleft">
                     <h3 className="agileits-title">Welcome !</h3>
-                    <h4>Sarah's Techno Services is proud to introduce itself as the major Manufacturer, Exporter and Supplier of a wide range of Post harvesting and food processing Machines and Equipment. The range includes Pneumatic Piston Filler, Fruit Mill, Hammer Mill, Heating Kettle, Lemon Cutting Machine and Sautiner. We provide our services as consultants in the manufacturing of pickle, sauce, and jam. Our Industrial Machines and Equipment are demanded by Food Processing Industry, Fruit Processing Industry, Manufacturers of Pickle Jam, Juice, Curry Paste and Ayurvedic Medicine Manufacturers, etc.</h4>
+                    <h4>Sarah's Techno is proud to introduce itself as the major Manufacturer, Exporter and Supplier of a wide range of Post harvesting and food processing Machines and Equipment. The range includes Pneumatic Piston Filler, Fruit Mill, Hammer Mill, Heating Kettle, Lemon Cutting Machine and Sautiner. We provide our services as consultants in the manufacturing of pickle, sauce, and jam. Our Industrial Machines and Equipment are demanded by Food Processing Industry, Fruit Processing Industry, Manufacturers of Pickle Jam, Juice, Curry Paste and Ayurvedic Medicine Manufacturers, etc.</h4>
                     <p> 
 
 
