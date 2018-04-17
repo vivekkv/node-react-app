@@ -19,10 +19,11 @@ class Videos extends React.Component {
                         this.props.data.get("lstAllVideos").map((image) => {
 
                             return <figure>
+                                <h6>{image.name}</h6>
                                 <a href={"/#/product/detail/" + image.category_id + "/" + image.id}>
 
-                                     <VideoWrapper poster={"/assets/uploads/" +image.imagePath} path ={image.path} width={"80%"} height={"80%"}/>
-                                    <figcaption>{image.name} <p>{image.description}</p></figcaption>
+                                    <video poster={"/assets/uploads/" + image.imagePath} controls="controls" controls src={"/assets/uploads/" + image.path + "?rel=0"} allowfullscreen></video>
+                                    <figcaption> <p>{image.description}</p></figcaption>
 
                                 </a>
                             </figure>

@@ -1,25 +1,25 @@
 .product_listing {
-    display: inline-block;
     margin-top: 50px
 }
 
 .product_listing li {
-    display: inline-block;
-    padding: 10px;
     box-shadow: 1px 1px 2px 2px #e8e8e8;
     margin: 5px;
-    width: 300px;
+    width: 23%;
+    list-style: none;
+    float: left;
+    height: 360px;
+    padding: 5px;
 }
 
 .product_listing li h3 {
-    text-align: center;
-    font-size: 18px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    padding: 10px;
+    background: black;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 12px;
+    text-align: center
 }
 
 .product_listing li img {
@@ -31,20 +31,16 @@
     text-align: right;
     float: left;
     cursor: pointer;
+    padding-right: 5px
 }
 
 .product_listing li p {
     float: left;
-    display: block;
-    display: -webkit-box;
-    max-width: 400px;
-    margin: 10px 0;
-    font-size: 14px;
-    line-height: 1.4;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
+    font-size: 12px;
+    height: 110px;
     overflow: hidden;
-    text-overflow: ellipsis;
+    padding: 5px;
+    text-align: justify;
 }
 
 .header {

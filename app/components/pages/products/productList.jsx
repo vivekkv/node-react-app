@@ -17,13 +17,14 @@ export default class ProductList extends React.Component {
 
                     return <li key={index}>
 
+                        <h3>{product.name}</h3> 
+                    
                         {
                             product.images[0] ? <div className={Styles.image_wrapper}><img src={"/assets/uploads/" + product.images[0].path} />
                             </div> : <div className={Styles.image_wrapper}><img src={"assets/images/no-image-available.png"} /></div>
                         }
 
                         
-                        <h3>{product.name}</h3>
                         <p>{product.description}</p>
                         <a href={"/#/product/detail/" + product.category_id +"/" + product.id}>Details</a>
 

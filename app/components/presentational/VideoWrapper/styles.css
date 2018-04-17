@@ -41,3 +41,7 @@
     left:40%;
     margin-top: 8%;
 }
+
+.wrapper video {
+    width: 100% !important
+}

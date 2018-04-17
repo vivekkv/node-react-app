@@ -35,14 +35,12 @@
 
 .slider_content {
     text-align: center;
-    height: 250px;
+    height: 300px;
 }
 
 .slider_content img{
-    width: 200px;
-    height: 200px;
-    display: inline-block;
-    margin-top: 10px
+    height: 96%;
+    margin: 10px 0;
 }
 
 .slider_content h3 {

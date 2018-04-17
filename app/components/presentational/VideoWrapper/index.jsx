@@ -7,7 +7,7 @@ export default class VideoWrapper extends React.Component {
 
         return this.props.path ?  <div>
             
-            <div style={{ 'width': this.props.width, 'height': this.props.height }} > 
+            <div style={{ 'width': this.props.width, 'height': this.props.height }} className={Styles.wrapper}> 
            
                  <video   poster={this.props.poster} controls="controls" 
                  controls src={"/assets/uploads/" + this.props.path+"?rel=0"} 

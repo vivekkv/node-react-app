@@ -24,7 +24,7 @@ class LandingPage extends React.Component {
 
             <Welcome />
 
-            <Video {...this.props}/>
+            {/* <Video {...this.props}/> */}
 
             {/* <Features {...this.props}/> */}
             <br />     <br />

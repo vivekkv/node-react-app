@@ -17,7 +17,8 @@ export default class Info extends React.Component {
                             <div className="about-agile-row">
                                 <div className="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
                                     <ul id="myTab" className=" nav-tabs" role="tablist">
-                                        <li role="presentation" className="active"><a id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">About</a></li>
+                                        <li role="presentation" className="active"><a id="home-tab" role="tab" data-toggle="tab" 
+                                        aria-controls="home" aria-expanded="true"></a></li>
                                     </ul>
                                     <div className="clearfix"> </div>
                                     <div id="myTabContent" className="tab-content">

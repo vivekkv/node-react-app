@@ -18,10 +18,13 @@ class Images extends React.Component {
                         this.props.data.get("lstAllImages").map((image) => {
 
                             return <figure>
+
+                                <h6>{image.name} </h6>
+
                                 <a href={"/#/product/detail/" + image.category_id + "/" + image.id}>
 
                                     <img src={"assets/uploads/" + image.path} alt="" />
-                                    <figcaption>{image.name} <p>{image.description}</p></figcaption>
+                                    <figcaption><p title={image.description}>{image.description}</p></figcaption>
 
                                 </a>
                             </figure>
