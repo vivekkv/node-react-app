@@ -11,14 +11,14 @@ export default class Slider extends React.Component {
                
                 <Carousel.Item>
                     <div className={Styles.slider_content}>
-                        <img src="/assets/images/banners/banner-1.png" />
+                        <img src="/assets/images/banners/banner-11.png" />
                         {/* <h3 style={{ "color": "#000" }}>Bowl Chopper</h3> */}
                     </div>
                 </Carousel.Item>
 
                 <Carousel.Item>
                     <div className={Styles.slider_content}>
-                        <img src="/assets/images/banners/banner-2.png" />
+                        <img src="/assets/images/banners/banner-12.png" />
                         {/* <h3 style={{ "color": "#000" }}>Drum Roaster</h3> */}
                     </div>
                 </Carousel.Item>
