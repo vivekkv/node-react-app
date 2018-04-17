@@ -134,7 +134,7 @@ export default class ProdutInfo extends React.Component {
 
                             <div className="col-lg-6 col-md-6 col-xs-12 col-sm-12">
 
-                               {
+                                {
                                     productInfo.capacity.length > 0 ?
 
                                         <div className={Styles.list_wrapper}>
@@ -180,6 +180,36 @@ export default class ProdutInfo extends React.Component {
                                                 }
                                             </ul>
 
+
+                                        </div> : null
+
+                                }
+                            </div>
+
+                        </Row>
+
+                        <Row>
+
+                            <div className="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+
+                                {
+                                    productInfo.images.length > 0 ?
+
+                                        <div className={Styles.list_wrapper}>
+
+                                            <h4>Images</h4>
+
+                                            <ul className={Styles.video_list}>
+                                                {
+                                                    productInfo.images.map((i, index) => {
+                                                        return <li key={index}>
+
+                                                            <img style={{ "width": "150px", "height": "150px" }} src={"assets/uploads/" + productInfo.images[0].path} />
+
+                                                        </li>
+                                                    })
+                                                }
+                                            </ul>
 
                                         </div> : null
 

@@ -1,6 +1,7 @@
 var db = require('../data/db');
 var uuid = require("node-uuid");
 var Promise = require("bluebird");
+var _ = require("lodash");
 
 function get(req, res) {
 
@@ -193,10 +194,21 @@ function getProductImages(req, res) {
         .join("images", 'product.id', '=', 'images.product_id')
         .select(["product.name", "images.path", "product.id", "product.description", "product.category_id"])
         .orderBy('product.id', 'desc')
-        .limit(15)
+        .limit(50)
         .then((data) => {
 
-            res.json({ 'success': true, 'data': data });
+            let list = [];
+
+            data.forEach((i) => {
+
+                let product = _.find(list, (o) => { return o.id == i.id });
+
+                if(!product) {
+                    list.push(i);
+                }
+            })
+
+            res.json({ 'success': true, 'data': list });
         })
         .catch(function (error) {
 
