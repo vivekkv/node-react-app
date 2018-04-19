@@ -56,3 +56,14 @@
     font-size: 15px;
     text-transform: uppercase;
 }
+
+@media only screen and (max-width: 768px) {
+    .slider_content img { 
+        width: 90% !important; 
+        height: 150px
+    }
+
+    .slider_content {
+        height: 155px
+    }
+}

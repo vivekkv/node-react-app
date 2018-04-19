@@ -38,7 +38,7 @@ export default class ProdutInfo extends React.Component {
                                 <img src={"assets/uploads/" + productInfo.images[0].path} />
                                 : <img src={"assets/images/no-image-available.png"} />
                         }
-
+    <br />
 
 
 
@@ -52,6 +52,7 @@ export default class ProdutInfo extends React.Component {
                             />
                         </div> */}
                         <div>
+                        <br />
                             <a href="/#/contact" className={Styles.enquire}>Enquire</a>
                         </div>
                     </div>
@@ -175,7 +176,7 @@ export default class ProdutInfo extends React.Component {
                                                     productInfo.videos.map((i, index) => {
                                                         return <li key={index}>
 
-                                                            <VideoWrapper poster={productInfo.images[0] ? "assets/uploads/" + productInfo.images[0].path : null} width="350" height="350" path={i.path} allowfullscreen></VideoWrapper></li>
+                                                            <VideoWrapper poster={productInfo.images[0] ? "assets/uploads/" + productInfo.images[0].path : null} width="200" height="200" path={i.path} allowfullscreen></VideoWrapper></li>
                                                     })
                                                 }
                                             </ul>
@@ -204,7 +205,7 @@ export default class ProdutInfo extends React.Component {
                                                     productInfo.images.map((i, index) => {
                                                         return <li key={index}>
 
-                                                            <img style={{ "width": "150px", "height": "150px" }} src={"assets/uploads/" + productInfo.images[0].path} />
+                                                            <img style={{ "width": "200px", "height": "200px" }} src={"assets/uploads/" + productInfo.images[0].path} />
 
                                                         </li>
                                                     })

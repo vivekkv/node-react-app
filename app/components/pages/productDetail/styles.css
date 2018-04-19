@@ -14,8 +14,9 @@
 }
 
 .body img{
-    height: 100px;
-    width: 100px
+    height: 200px;
+    width: 200px;
+    max-height: 300px
 }
 
 .body h5 {

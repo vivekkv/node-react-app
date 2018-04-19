@@ -19,7 +19,7 @@ class ProductDetail extends React.Component {
         
             <Row>
 
-                <div className="col-lg-3 col-md-3 col-xs-12 col-sm-12">
+                {/* <div className="col-lg-3 col-md-3 col-xs-12 col-sm-12">
 
                     <div className={Styles.product_menu_wrapper}>
 
@@ -30,10 +30,10 @@ class ProductDetail extends React.Component {
 
                     </div>
 
-                </div>
+                </div> */}
 
 
-                <div className="col-lg-9 col-md-9 col-xs-12 col-sm-12">
+                <div className="col-lg-12 col-md-12 col-xs-12 col-sm-12">
 
                     <ProductInfo {...this.props} />
 

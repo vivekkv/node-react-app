@@ -22,7 +22,7 @@ export default class LatestNews extends React.Component {
                 <div className={Styles.latest_products}>
 
                 <div className="w3ls-title">
-                    <h3 className="agileits-title">Latest Products</h3>
+                    <h3 className="agileits-title" style={{ "font-size": "20px" }}>Latest Products</h3>
                 </div>
 
                     <Slider images={latestProducts.map((i) => { return '/assets/uploads/' + i.path })} isInfinite delay={2000}>

@@ -749,6 +749,7 @@ h3.w3ls-title{
     margin: 0 0 1em;
     line-height: 1.8em;
     font-weight: 400;
+    text-align: justify
 }
 .service-box { 
 	padding: 0; 
@@ -1693,13 +1694,11 @@ ul.bs-glyphicons-list {
 	-o-transition: .5s all;
 	-ms-transition: .5s all;
 } 
-.team-right {
-    width: 70%;
-    padding: 2.6em 2em;
-    -webkit-box-shadow: rgba(21, 20, 20, 0.24) 1px 2px 6px 2px;
-    -moz-box-shadow: rgba(21, 20, 20, 0.24) 1px 2px 6px 2px;
-	box-shadow: rgba(21, 20, 20, 0.24) 1px 2px 6px 2px;
+
+.top-nav-text p {
+    text-align: right !important
 }
+
 .team-right h4 {
     font-size: 1.5em;
     color: #333; 
@@ -1985,7 +1984,7 @@ div#bs-example-navbar-collapse-1 {
     width: 100%;
     position: absolute;
     left: 0;
-    background: #4a142e;
+    background: #2d2d2d;
     z-index: 9999;
     text-align: center;
 }
@@ -2061,9 +2060,7 @@ ul.nav.navbar-nav.navbar-left.cl-effect-14 {
 .services-row { 
     padding: 2.5em 2em;
 }
-.team-right {
-    padding: 3.2em 3em;
-}
+
 .title h3 {
     font-size: 3em; 
 }
@@ -2082,9 +2079,7 @@ ul.nav.navbar-nav.navbar-left.cl-effect-14 {
 } 
 }
 @media(max-width:640px){
-.team-right {
-    padding: 2.9em 3em;
-}
+
 .contact input[type="text"], .contact input[type="email"] {
     width: 100%;
     float: none;
@@ -2714,6 +2709,13 @@ img.img-responsive {
   transition: all .3s ease-in-out;
 }
 
+@media only screen and (max-width: 768px) {
+    .gallery figure  {
+        width: 100%;  
+    }
+}
+
+
 .gallery figure h6 {
     padding: 10px;
     background: black;
@@ -3338,3 +3340,6 @@ img.img-responsive {
     border-bottom: 1px solid #dedede;
     margin-bottom: 8px;
   }
+p {
+    text-align: justify !important
+}

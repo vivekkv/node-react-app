@@ -12,6 +12,13 @@
     padding: 5px;
 }
 
+
+@media only screen and (max-width: 768px) {
+    .product_listing li {
+        width: 100%;  
+    }
+}
+
 .product_listing li h3 {
     padding: 10px;
     background: black;
